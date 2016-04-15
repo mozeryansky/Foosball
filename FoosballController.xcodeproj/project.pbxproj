@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C867A551CC0FC0D00C5115B /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C867A541CC0FC0D00C5115B /* opencv2.framework */; };
+		4C867A601CC0FC9000C5115B /* RosyWriterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C867A581CC0FC9000C5115B /* RosyWriterAppDelegate.m */; };
+		4C867A611CC0FC9000C5115B /* RosyWriterCapturePipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C867A5A1CC0FC9000C5115B /* RosyWriterCapturePipeline.m */; };
+		4C867A621CC0FC9000C5115B /* RosyWriterOpenCVRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C867A5C1CC0FC9000C5115B /* RosyWriterOpenCVRenderer.mm */; };
+		4C867A631CC0FC9000C5115B /* RosyWriterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C867A5F1CC0FC9000C5115B /* RosyWriterViewController.m */; };
+		4C867A651CC0FCEA00C5115B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C867A641CC0FCEA00C5115B /* Main.storyboard */; };
 		4CFCEC2B1CC0D9A300621DE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCEC2A1CC0D9A300621DE6 /* main.m */; };
 		4CFCEC2E1CC0D9A300621DE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCEC2D1CC0D9A300621DE6 /* AppDelegate.m */; };
 		4CFCEC311CC0D9A300621DE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCEC301CC0D9A300621DE6 /* ViewController.m */; };
@@ -16,6 +22,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C867A541CC0FC0D00C5115B /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		4C867A571CC0FC9000C5115B /* RosyWriterAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RosyWriterAppDelegate.h; path = classes/RosyWriterAppDelegate.h; sourceTree = "<group>"; };
+		4C867A581CC0FC9000C5115B /* RosyWriterAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RosyWriterAppDelegate.m; path = classes/RosyWriterAppDelegate.m; sourceTree = "<group>"; };
+		4C867A591CC0FC9000C5115B /* RosyWriterCapturePipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RosyWriterCapturePipeline.h; path = classes/RosyWriterCapturePipeline.h; sourceTree = "<group>"; };
+		4C867A5A1CC0FC9000C5115B /* RosyWriterCapturePipeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RosyWriterCapturePipeline.m; path = classes/RosyWriterCapturePipeline.m; sourceTree = "<group>"; };
+		4C867A5B1CC0FC9000C5115B /* RosyWriterOpenCVRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RosyWriterOpenCVRenderer.h; path = classes/RosyWriterOpenCVRenderer.h; sourceTree = "<group>"; };
+		4C867A5C1CC0FC9000C5115B /* RosyWriterOpenCVRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RosyWriterOpenCVRenderer.mm; path = classes/RosyWriterOpenCVRenderer.mm; sourceTree = "<group>"; };
+		4C867A5D1CC0FC9000C5115B /* RosyWriterRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RosyWriterRenderer.h; path = classes/RosyWriterRenderer.h; sourceTree = "<group>"; };
+		4C867A5E1CC0FC9000C5115B /* RosyWriterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RosyWriterViewController.h; path = classes/RosyWriterViewController.h; sourceTree = "<group>"; };
+		4C867A5F1CC0FC9000C5115B /* RosyWriterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RosyWriterViewController.m; path = classes/RosyWriterViewController.m; sourceTree = "<group>"; };
+		4C867A641CC0FCEA00C5115B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4CFCEC261CC0D9A300621DE6 /* FoosballController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoosballController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFCEC2A1CC0D9A300621DE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CFCEC2C1CC0D9A300621DE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,16 +50,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C867A551CC0FC0D00C5115B /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C867A531CC0FBF400C5115B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C867A541CC0FC0D00C5115B /* opencv2.framework */,
+			);
+			name = Frameworks;
+			path = FoosballController;
+			sourceTree = "<group>";
+		};
+		4C867A561CC0FC7100C5115B /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				4C867A571CC0FC9000C5115B /* RosyWriterAppDelegate.h */,
+				4C867A581CC0FC9000C5115B /* RosyWriterAppDelegate.m */,
+				4C867A591CC0FC9000C5115B /* RosyWriterCapturePipeline.h */,
+				4C867A5A1CC0FC9000C5115B /* RosyWriterCapturePipeline.m */,
+				4C867A5B1CC0FC9000C5115B /* RosyWriterOpenCVRenderer.h */,
+				4C867A5C1CC0FC9000C5115B /* RosyWriterOpenCVRenderer.mm */,
+				4C867A5D1CC0FC9000C5115B /* RosyWriterRenderer.h */,
+				4C867A5E1CC0FC9000C5115B /* RosyWriterViewController.h */,
+				4C867A5F1CC0FC9000C5115B /* RosyWriterViewController.m */,
+				4C867A641CC0FCEA00C5115B /* Main.storyboard */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
 		4CFCEC1D1CC0D9A300621DE6 = {
 			isa = PBXGroup;
 			children = (
 				4CFCEC281CC0D9A300621DE6 /* FoosballController */,
+				4C867A531CC0FBF400C5115B /* Frameworks */,
+				4CFCEC291CC0D9A300621DE6 /* Supporting Files */,
 				4CFCEC271CC0D9A300621DE6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,10 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				4CFCEC421CC0D9C100621DE6 /* main */,
+				4C867A561CC0FC7100C5115B /* classes */,
 				4CFCEC411CC0D9BA00621DE6 /* Controllers */,
 				4CFCEC301CC0D9A300621DE6 /* ViewController.m */,
 				4CFCEC401CC0D9B500621DE6 /* Models */,
-				4CFCEC291CC0D9A300621DE6 /* Supporting Files */,
 			);
 			path = FoosballController;
 			sourceTree = "<group>";
@@ -76,6 +122,7 @@
 				4CFCEC2A1CC0D9A300621DE6 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = FoosballController;
 			sourceTree = "<group>";
 		};
 		4CFCEC401CC0D9B500621DE6 /* Models */ = {
@@ -179,6 +226,7 @@
 				4CFCEC391CC0D9A300621DE6 /* LaunchScreen.storyboard in Resources */,
 				4CFCEC361CC0D9A300621DE6 /* Assets.xcassets in Resources */,
 				4CFCEC341CC0D9A300621DE6 /* Main.storyboard in Resources */,
+				4C867A651CC0FCEA00C5115B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,9 +237,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C867A601CC0FC9000C5115B /* RosyWriterAppDelegate.m in Sources */,
+				4C867A611CC0FC9000C5115B /* RosyWriterCapturePipeline.m in Sources */,
 				4CFCEC311CC0D9A300621DE6 /* ViewController.m in Sources */,
+				4C867A631CC0FC9000C5115B /* RosyWriterViewController.m in Sources */,
 				4CFCEC2E1CC0D9A300621DE6 /* AppDelegate.m in Sources */,
 				4CFCEC2B1CC0D9A300621DE6 /* main.m in Sources */,
+				4C867A621CC0FC9000C5115B /* RosyWriterOpenCVRenderer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +355,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FoosballController",
+				);
 				INFOPLIST_FILE = FoosballController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ozeryansky.FoosballController;
@@ -314,6 +370,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FoosballController",
+				);
 				INFOPLIST_FILE = FoosballController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ozeryansky.FoosballController;
@@ -340,6 +400,7 @@
 				4CFCEC3F1CC0D9A300621DE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
