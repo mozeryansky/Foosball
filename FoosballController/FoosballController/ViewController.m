@@ -41,19 +41,29 @@
     } else {
         // print available serial ports
         NSLog(@"Available serial ports:");
+        __block NSUInteger bluetoothPort = 0;
         NSArray *availablePorts = self.serialManager.availablePorts;
         [availablePorts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             ORSSerialPort *port = (ORSSerialPort *)obj;
             NSLog(@"%lu. %@\n", (unsigned long)idx, port.name);
+            if([port.name rangeOfString:@"RNBT"].location != NSNotFound){
+                bluetoothPort = idx;
+            }
         }];
         
         // open usb port: 0
-        ORSSerialPort *port = [availablePorts objectAtIndex:0];
+        ORSSerialPort *port = [availablePorts objectAtIndex:bluetoothPort];
         self.serialPort = port;
-        self.serialPort.baudRate = @9600;
+        self.serialPort.baudRate = @115200;
         self.serialPort.delegate = self;
-        [self.serialPort open];
     }
+}
+
+- (void)viewDidAppear
+{
+    [super viewDidAppear];
+    
+    [self.serialPort open];
 }
 
 - (void)setRepresentedObject:(id)representedObject
@@ -91,7 +101,7 @@
     prevSent = value;
     
     // send
-    NSString *dataStr = [NSString stringWithFormat:@"p%03d", value];
+    NSString *dataStr = [NSString stringWithFormat:@"p%d", value];
     [self sendString:dataStr];
 }
 
@@ -123,7 +133,7 @@
     prevSent = value;
     
     // send
-    NSString *dataStr = [NSString stringWithFormat:@"r%03d", value];
+    NSString *dataStr = [NSString stringWithFormat:@"r%d", value];
     [self sendString:dataStr];
 }
 
@@ -152,15 +162,15 @@
 {
     static int direction = 1;
     
-    if(self.position == 100){
+    if(self.position >= self.maxPosition){
         direction = -1;
-    } else if(self.position == 0){
+    } else if(self.position <= self.minPosition){
         direction = 1;
     }
     
     double slider = self.positionSlider.doubleValue;
     
-    int maxStep = 5;
+    int maxStep = 50;
     int step = ceil((slider/100.0)*maxStep);
     self.position += direction * step;
 }
@@ -187,15 +197,15 @@
 {
     static int direction = 1;
     
-    if(self.rotation == 90){
+    if(self.rotation >= self.maxRotation){
         direction = -1;
-    } else if(self.rotation == -90){
+    } else if(self.rotation <= self.minRotation){
         direction = 1;
     }
     
     double slider = self.rotationSlider.doubleValue;
     
-    int maxStep = 6;
+    int maxStep = 60;
     int step = ceil((slider/100.0)*maxStep);
     self.rotation += direction * step;
 }
@@ -305,6 +315,8 @@
     _position = 0;
     
     [self.positionTextField setDoubleValue:_position];
+    
+    [self sendString:@"zp"];
 }
 
 - (IBAction)setZeroRotationButtonPressed:(NSButton *)sender
@@ -312,6 +324,17 @@
     _rotation = 0;
     
     [self.rotationTextField setDoubleValue:_rotation];
+
+    [self sendString:@"zr"];
+}
+
+- (IBAction)connectButtonPressed:(id)sender
+{
+    if(self.serialPort.isOpen){
+        [self.serialPort close];
+    } else {
+        [self.serialPort open];
+    }
 }
 
 #pragma mark - ORSSerialPort
@@ -339,11 +362,29 @@
 - (void)serialPort:(ORSSerialPort *)serialPort didEncounterError:(NSError *)error
 {
     NSLog(@"%s %@ %@", __PRETTY_FUNCTION__, serialPort, error);
+    
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"OK"];
+    [alert setMessageText:@"Serial Port Error"];
+    [alert setInformativeText:error.localizedDescription];
+    [alert setAlertStyle:NSCriticalAlertStyle];
+    [alert runModal];
 }
 
 - (void)serialPortWasOpened:(ORSSerialPort *)serialPort
 {
     NSLog(@"Serial port %@ was opened", serialPort.name);
+    
+    [self.connectButton setState:NSOnState];
+    [self.connectButton setTitle:@"Disconnect"];
+}
+
+- (void)serialPortWasClosed:(ORSSerialPort *)serialPort
+{
+    NSLog(@"Serial port %@ was closed", serialPort.name);
+    
+    [self.connectButton setState:NSOffState];
+    [self.connectButton setTitle:@"Connect"];
 }
 
 @end

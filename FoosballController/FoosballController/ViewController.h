@@ -19,6 +19,7 @@
 @property (weak) IBOutlet NSTextField *positionTextField;
 @property (weak) IBOutlet NSSlider *positionSlider;
 @property (weak) IBOutlet NSSlider *rotationSlider;
+@property (weak) IBOutlet NSButton *connectButton;
 
 - (IBAction)rotationTextFieldChanged:(NSTextField *)sender;
 - (IBAction)positionTextFieldChanged:(NSTextField *)sender;
@@ -38,6 +39,8 @@
 
 - (IBAction)setZeroPositionButtonPressed:(NSButton *)sender;
 - (IBAction)setZeroRotationButtonPressed:(NSButton *)sender;
+
+- (IBAction)connectButtonPressed:(id)sender;
 
 @end
 
