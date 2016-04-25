@@ -9,9 +9,13 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-@property (nonatomic) double rotation;
-@property (nonatomic) double position;
 @property (strong, nonatomic) ORSSerialPortManager *serialManager;
+@property (nonatomic) double position;
+@property (nonatomic) double rotation;
+@property (nonatomic) double minPosition;
+@property (nonatomic) double maxPosition;
+@property (nonatomic) double minRotation;
+@property (nonatomic) double maxRotation;
 @end
 
 @implementation ViewController
@@ -20,7 +24,12 @@
 {
     [super viewDidLoad];
     
-    self.position = 50;
+    self.minPosition = 0;
+    self.maxPosition = 360;
+    self.minRotation = -90;
+    self.maxRotation = 90;
+    
+    self.position = 0;
     self.rotation = 0;
     
     [self.positionTextField setDoubleValue:self.position];
@@ -58,10 +67,10 @@
 
 - (void)setPosition:(double)position
 {
-    if(position < 0){
-        position = 0;
-    } else if(position > 100){
-        position = 100;
+    if(position < self.minPosition){
+        position = self.minPosition;
+    } else if(position > self.maxPosition){
+        position = self.maxPosition;
     }
     
     _position = position;
@@ -86,20 +95,14 @@
     [self sendString:dataStr];
 }
 
-- (IBAction)positionTextFieldChanged:(NSTextField *)textField
-{
-    [self setPosition:textField.doubleValue];
-    [textField setDoubleValue:self.position];
-}
-
 #pragma mark - Rotation
 
 - (void)setRotation:(double)rotation
 {
-    if(rotation < -90){
-        rotation = -90;
-    } else if(rotation > 90){
-        rotation = 90;
+    if(rotation < self.minRotation){
+        rotation = self.minRotation;
+    } else if(rotation > self.maxRotation){
+        rotation = self.maxRotation;
     }
     
     _rotation = rotation;
@@ -122,12 +125,6 @@
     // send
     NSString *dataStr = [NSString stringWithFormat:@"r%03d", value];
     [self sendString:dataStr];
-}
-
-- (IBAction)rotationTextFieldChanged:(NSTextField *)textField
-{
-    [self setRotation:textField.doubleValue];
-    [textField setDoubleValue:self.rotation];
 }
 
 #pragma mark - Mouse
@@ -219,6 +216,102 @@
         // off
         [timer invalidate];
     }
+}
+
+#pragma mark - Text Input
+
+- (IBAction)positionTextFieldChanged:(NSTextField *)textField
+{
+    double val = textField.doubleValue;
+    
+    if(val > self.maxPosition){
+        self.maxPosition = val;
+    } else if(val < self.minPosition){
+        self.minPosition = val;
+    }
+    
+    [self setPosition:val];
+}
+
+- (IBAction)rotationTextFieldChanged:(NSTextField *)textField
+{
+    double val = textField.doubleValue;
+    
+    if(val > self.maxRotation){
+        self.maxRotation = val;
+    } else if(val < self.minRotation){
+        self.minRotation = val;
+    }
+    
+    [self setRotation:val];
+}
+
+#pragma mark - button actions
+
+- (IBAction)minPositionButtonPressed:(NSButton *)sender
+{
+    self.minPosition = self.position;
+}
+
+- (IBAction)maxPositionButtonPressed:(NSButton *)sender
+{
+    self.maxPosition = self.position;
+}
+
+- (IBAction)minRotationButtonPressed:(NSButton *)sender
+{
+    self.minRotation = self.rotation;
+}
+
+- (IBAction)maxRotationButtonPressed:(NSButton *)sender
+{
+    self.maxRotation = self.rotation;
+}
+
+- (IBAction)decreasePositionButtonPressed:(NSButton *)sender
+{
+    if(self.position - 1 < self.minPosition){
+        self.minPosition--;
+    }
+    self.position -= 1;
+}
+
+- (IBAction)increasePositionButtonPressed:(NSButton *)sender
+{
+    if(self.position + 1 > self.maxPosition){
+        self.maxPosition++;
+    }
+    self.position += 1;
+}
+
+- (IBAction)decreaseRotationButtonPressed:(NSButton *)sender
+{
+    if(self.rotation - 1 < self.minRotation){
+        self.minRotation--;
+    }
+    self.rotation -= 1;
+}
+
+- (IBAction)increaseRotationButtonPressed:(NSButton *)sender
+{
+    if(self.rotation + 1 > self.maxRotation){
+        self.maxRotation++;
+    }
+    self.rotation += 1;
+}
+
+- (IBAction)setZeroPositionButtonPressed:(NSButton *)sender
+{
+    _position = 0;
+    
+    [self.positionTextField setDoubleValue:_position];
+}
+
+- (IBAction)setZeroRotationButtonPressed:(NSButton *)sender
+{
+    _rotation = 0;
+    
+    [self.rotationTextField setDoubleValue:_rotation];
 }
 
 #pragma mark - ORSSerialPort

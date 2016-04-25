@@ -718,8 +718,8 @@
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gte-Oz-kf5">
-                                <rect key="frame" x="133" y="231" width="15" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="%" id="lDa-qW-Hq2">
+                                <rect key="frame" x="133" y="231" width="10" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="°" id="lDa-qW-Hq2">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -744,12 +744,12 @@
                                 </connections>
                             </button>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="183-fN-bNx">
-                                <rect key="frame" x="219" y="230" width="243" height="21"/>
+                                <rect key="frame" x="219" y="230" width="68" height="21"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="CSe-FT-Izm"/>
                             </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Xg-3c-hSr">
-                                <rect key="frame" x="219" y="200" width="243" height="21"/>
-                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="44.444444444444443" tickMarkPosition="above" sliderType="linear" id="pG1-q6-xfD"/>
+                                <rect key="frame" x="219" y="200" width="68" height="21"/>
+                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="pG1-q6-xfD"/>
                             </slider>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxd-U9-98p">
                                 <rect key="frame" x="148" y="193" width="71" height="32"/>
@@ -761,9 +761,110 @@
                                     <action selector="rotationLoopButtonPressed:" target="XfG-lQ-9wD" id="UPE-4J-6GX"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ype-nF-zgi">
+                                <rect key="frame" x="370" y="224" width="50" height="32"/>
+                                <buttonCell key="cell" type="push" title="min" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jaq-LJ-GRu">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="minPositionButtonPressed:" target="XfG-lQ-9wD" id="ZGR-rj-5oC"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqC-qv-HdW">
+                                <rect key="frame" x="410" y="224" width="54" height="32"/>
+                                <buttonCell key="cell" type="push" title="max" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YyL-yS-s7G">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="maxPositionButtonPressed:" target="XfG-lQ-9wD" id="Skf-52-DPT"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="piJ-UW-TBR">
+                                <rect key="frame" x="370" y="194" width="50" height="32"/>
+                                <buttonCell key="cell" type="push" title="min" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0d2-Vx-1lB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="minRotationButtonPressed:" target="XfG-lQ-9wD" id="Skp-o4-qaI"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D5G-Rx-MXO">
+                                <rect key="frame" x="410" y="194" width="54" height="32"/>
+                                <buttonCell key="cell" type="push" title="max" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="g3m-hR-OCn">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="maxRotationButtonPressed:" target="XfG-lQ-9wD" id="ohs-Qc-K9D"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x34-tZ-xrl">
+                                <rect key="frame" x="287" y="224" width="36" height="32"/>
+                                <buttonCell key="cell" type="push" title="&lt;" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="R5U-Yp-uYf">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="decreasePositionButtonPressed:" target="XfG-lQ-9wD" id="sJc-q0-fS2"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h18-Ct-wgF">
+                                <rect key="frame" x="287" y="194" width="36" height="32"/>
+                                <buttonCell key="cell" type="push" title="&lt;" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HwE-iK-hRU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="decreaseRotationButtonPressed:" target="XfG-lQ-9wD" id="Qeg-fh-opX"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NcR-5j-DTb">
+                                <rect key="frame" x="315" y="224" width="36" height="32"/>
+                                <buttonCell key="cell" type="push" title="&gt;" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wIx-zw-0O7">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="increasePositionButtonPressed:" target="XfG-lQ-9wD" id="RaS-Ms-2c0"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jcq-4R-6OC">
+                                <rect key="frame" x="315" y="194" width="36" height="32"/>
+                                <buttonCell key="cell" type="push" title="&gt;" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1tO-fp-0Cn">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="increaseRotationButtonPressed:" target="XfG-lQ-9wD" id="YDa-6l-HYT"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lY4-kW-VS5">
+                                <rect key="frame" x="343" y="224" width="36" height="32"/>
+                                <buttonCell key="cell" type="push" title="0" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uKg-k0-5gT">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="setZeroPositionButtonPressed:" target="XfG-lQ-9wD" id="6RU-xZ-2Tw"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4h-7g-zGj">
+                                <rect key="frame" x="343" y="194" width="36" height="32"/>
+                                <buttonCell key="cell" type="push" title="0" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ddm-Dz-7wd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="setZeroRotationButtonPressed:" target="XfG-lQ-9wD" id="H5Y-7C-8h9"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="maxRotationButtonPressed" destination="D5G-Rx-MXO" id="nWA-Zw-Dsg"/>
                         <outlet property="positionSlider" destination="183-fN-bNx" id="idu-WL-u0s"/>
                         <outlet property="positionTextField" destination="Y7h-KO-zV2" id="EXG-Xb-g1b"/>
                         <outlet property="rotationSlider" destination="0Xg-3c-hSr" id="rpg-rX-NZe"/>

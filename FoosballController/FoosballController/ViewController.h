@@ -26,5 +26,18 @@
 - (IBAction)positionLoopButtonPressed:(NSButton *)sender;
 - (IBAction)rotationLoopButtonPressed:(NSButton *)sender;
 
+- (IBAction)minPositionButtonPressed:(NSButton *)sender;
+- (IBAction)maxPositionButtonPressed:(NSButton *)sender;
+- (IBAction)minRotationButtonPressed:(NSButton *)sender;
+- (IBAction)maxRotationButtonPressed:(NSButton *)sender;
+
+- (IBAction)decreasePositionButtonPressed:(NSButton *)sender;
+- (IBAction)increasePositionButtonPressed:(NSButton *)sender;
+- (IBAction)decreaseRotationButtonPressed:(NSButton *)sender;
+- (IBAction)increaseRotationButtonPressed:(NSButton *)sender;
+
+- (IBAction)setZeroPositionButtonPressed:(NSButton *)sender;
+- (IBAction)setZeroRotationButtonPressed:(NSButton *)sender;
+
 @end
 
