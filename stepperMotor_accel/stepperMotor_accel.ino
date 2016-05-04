@@ -13,7 +13,7 @@ int pinStep2 = 7;
 SoftwareSerial Bluetooth(btRxPin, btTxPin);
 
 AccelStepper stepper1(AccelStepper::DRIVER, pinStep1, pinDir1);
-AccelStepper stepper2(AccelStepper::DRIVER, pinStep2, pinDir2);
+AccelStepper stepper2(4, 3, 4, 5, 6);
 
 void setup()
 {
@@ -35,13 +35,17 @@ void setup()
 
 String str;
 
+
 void loop()
 {
-  char incomingByte;
+  char incomingByte = '-';
   
   if (Bluetooth.available() > 0) {
     incomingByte = Bluetooth.read();
-    useByte(incomingByte);
+    //Serial.print(incomingByte);
+    if(incomingByte == 'p' || incomingByte == 'r' || incomingByte == 'z'){
+      useByte(incomingByte);
+    }
   }
 
   stepper1.run();
@@ -50,45 +54,56 @@ void loop()
 
 void useByte(char incomingByte)
 {
-  String str;
+  String str = "";
   char newByte = ' ';
   int sign = 1;
+  int count = 0;
   
   if (Bluetooth.available() > 0) {
     newByte = Bluetooth.read();
+    //Serial.print(newByte);
   }
     
   while (newByte != '|') {
-    if (newByte == '-') {
+    if (newByte == '-' || newByte == ',') {
       sign = -1;
-    } else { 
+    } else if (newByte >= '0' || newByte <= '9') {
       str.concat(newByte);
+    } else {
+      Serial.println("!!!!!!!!!!!!!!!!!!!");
     }
     if (Bluetooth.available() > 0) {
       newByte = Bluetooth.read();
+      //Serial.println(newByte);
+    }
+    count++;
+    if (count > 3) {
+      break;
     }
   }
   
   int value = sign * str.toInt();
-  int steps = deg2steps(value);
+  if (value <= 500) {
+    int steps = deg2steps(value);
 
-  Serial.print(incomingByte);
-  Serial.print(' ');
-  Serial.print(str);
-  Serial.print('=');
-  Serial.println(value);
-  
-  if (incomingByte == 'p') {
-    stepper1.moveTo(steps); 
+    Serial.print(incomingByte);
+    Serial.print(' ');
+    Serial.print(str);
+    Serial.print(" = ");
+    Serial.println(value);
     
-  } else if (incomingByte == 'r') {
-    stepper2.moveTo(steps);
-  
-  } else if(incomingByte == 'z') {
-    if(str == "p"){
-      stepper1.setCurrentPosition(0);
-    } else if(str == "r"){
-      stepper2.setCurrentPosition(0);
+    if (incomingByte == 'p') {
+      stepper1.moveTo(steps); 
+      
+    } else if (incomingByte == 'r') {
+      stepper2.moveTo(steps);
+    
+    } else if(incomingByte == 'z') {
+      if(str == "p"){
+        stepper1.setCurrentPosition(0);
+      } else if(str == "r"){
+        stepper2.setCurrentPosition(0);
+      }
     }
   }
 }
