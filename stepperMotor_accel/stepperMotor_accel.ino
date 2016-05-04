@@ -13,7 +13,7 @@ int pinStep2 = 7;
 SoftwareSerial Bluetooth(btRxPin, btTxPin);
 
 AccelStepper stepper1(AccelStepper::DRIVER, pinStep1, pinDir1);
-AccelStepper stepper2(4, 3, 4, 5, 6);
+AccelStepper stepper2(AccelStepper::DRIVER, pinStep2, pinDir2);
 
 void setup()
 {
