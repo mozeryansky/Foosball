@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CAD5FA61CD1A16800DB8751 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAD5FA51CD1A16800DB8751 /* main.m */; };
+		4CAD5FA91CD1A16800DB8751 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAD5FA81CD1A16800DB8751 /* AppDelegate.m */; };
+		4CAD5FAC1CD1A16800DB8751 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAD5FAB1CD1A16800DB8751 /* ViewController.m */; };
+		4CAD5FAF1CD1A16800DB8751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CAD5FAD1CD1A16800DB8751 /* Main.storyboard */; };
+		4CAD5FB11CD1A16800DB8751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CAD5FB01CD1A16800DB8751 /* Assets.xcassets */; };
+		4CAD5FB41CD1A16800DB8751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CAD5FB21CD1A16800DB8751 /* LaunchScreen.storyboard */; };
+		4CAD5FBF1CD1A3FB00DB8751 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD5FBE1CD1A3FB00DB8751 /* opencv2.framework */; };
+		4CAD5FCC1CD1B1D000DB8751 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD5FCB1CD1B1D000DB8751 /* Accelerate.framework */; };
+		4CAD5FCE1CD1B1D900DB8751 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD5FCD1CD1B1D900DB8751 /* AssetsLibrary.framework */; };
+		4CAD5FD01CD1B1E200DB8751 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD5FCF1CD1B1E200DB8751 /* AVFoundation.framework */; };
+		4CAD5FD51CD1B1F800DB8751 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD5FD11CD1B1F800DB8751 /* CoreGraphics.framework */; };
+		4CAD5FD61CD1B1F800DB8751 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD5FD21CD1B1F800DB8751 /* CoreImage.framework */; };
+		4CAD5FD71CD1B1F800DB8751 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD5FD31CD1B1F800DB8751 /* CoreMedia.framework */; };
+		4CAD5FD81CD1B1F800DB8751 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD5FD41CD1B1F800DB8751 /* CoreVideo.framework */; };
+		4CAD5FDA1CD1B20000DB8751 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD5FD91CD1B20000DB8751 /* QuartzCore.framework */; };
+		4CAD5FDC1CD1B20A00DB8751 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD5FDB1CD1B20A00DB8751 /* UIKit.framework */; };
+		4CAD5FDE1CD1B21400DB8751 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD5FDD1CD1B21400DB8751 /* Foundation.framework */; };
+		4CEB66851CD461BE0008282A /* pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEB66841CD461BE0008282A /* pattern.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4CAD5FA11CD1A16800DB8751 /* FoosballCameraController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoosballCameraController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CAD5FA51CD1A16800DB8751 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4CAD5FA71CD1A16800DB8751 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4CAD5FA81CD1A16800DB8751 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4CAD5FAA1CD1A16800DB8751 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4CAD5FAB1CD1A16800DB8751 /* ViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = ViewController.m; sourceTree = "<group>"; };
+		4CAD5FAE1CD1A16800DB8751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CAD5FB01CD1A16800DB8751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CAD5FB31CD1A16800DB8751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CAD5FB51CD1A16800DB8751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CAD5FBE1CD1A3FB00DB8751 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		4CAD5FCB1CD1B1D000DB8751 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		4CAD5FCD1CD1B1D900DB8751 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		4CAD5FCF1CD1B1E200DB8751 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4CAD5FD11CD1B1F800DB8751 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4CAD5FD21CD1B1F800DB8751 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		4CAD5FD31CD1B1F800DB8751 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		4CAD5FD41CD1B1F800DB8751 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		4CAD5FD91CD1B20000DB8751 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4CAD5FDB1CD1B20A00DB8751 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4CAD5FDD1CD1B21400DB8751 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4CEB66841CD461BE0008282A /* pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pattern.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CAD5F9E1CD1A16800DB8751 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CAD5FDE1CD1B21400DB8751 /* Foundation.framework in Frameworks */,
+				4CAD5FDC1CD1B20A00DB8751 /* UIKit.framework in Frameworks */,
+				4CAD5FDA1CD1B20000DB8751 /* QuartzCore.framework in Frameworks */,
+				4CAD5FD51CD1B1F800DB8751 /* CoreGraphics.framework in Frameworks */,
+				4CAD5FD61CD1B1F800DB8751 /* CoreImage.framework in Frameworks */,
+				4CAD5FD71CD1B1F800DB8751 /* CoreMedia.framework in Frameworks */,
+				4CAD5FD81CD1B1F800DB8751 /* CoreVideo.framework in Frameworks */,
+				4CAD5FD01CD1B1E200DB8751 /* AVFoundation.framework in Frameworks */,
+				4CAD5FCE1CD1B1D900DB8751 /* AssetsLibrary.framework in Frameworks */,
+				4CAD5FCC1CD1B1D000DB8751 /* Accelerate.framework in Frameworks */,
+				4CAD5FBF1CD1A3FB00DB8751 /* opencv2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C69A1C01CD2ED1900F806AD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4CEB66841CD461BE0008282A /* pattern.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		4CAD5F981CD1A16800DB8751 = {
+			isa = PBXGroup;
+			children = (
+				4CAD5FA31CD1A16800DB8751 /* FoosballCameraController */,
+				4CAD5FC01CD1A40C00DB8751 /* Frameworks */,
+				4CAD5FA21CD1A16800DB8751 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CAD5FA21CD1A16800DB8751 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CAD5FA11CD1A16800DB8751 /* FoosballCameraController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CAD5FA31CD1A16800DB8751 /* FoosballCameraController */ = {
+			isa = PBXGroup;
+			children = (
+				4CAD5FBB1CD1A18200DB8751 /* AppDelegate */,
+				4CAD5FAD1CD1A16800DB8751 /* Main.storyboard */,
+				4CAD5FBC1CD1A19B00DB8751 /* Controllers */,
+				4CAD5FBD1CD1A1A000DB8751 /* Models */,
+				4C69A1C01CD2ED1900F806AD /* Images */,
+				4CAD5FA41CD1A16800DB8751 /* Supporting Files */,
+			);
+			path = FoosballCameraController;
+			sourceTree = "<group>";
+		};
+		4CAD5FA41CD1A16800DB8751 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CAD5FB01CD1A16800DB8751 /* Assets.xcassets */,
+				4CAD5FB21CD1A16800DB8751 /* LaunchScreen.storyboard */,
+				4CAD5FB51CD1A16800DB8751 /* Info.plist */,
+				4CAD5FA51CD1A16800DB8751 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4CAD5FBB1CD1A18200DB8751 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4CAD5FA71CD1A16800DB8751 /* AppDelegate.h */,
+				4CAD5FA81CD1A16800DB8751 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4CAD5FBC1CD1A19B00DB8751 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CAD5FAA1CD1A16800DB8751 /* ViewController.h */,
+				4CAD5FAB1CD1A16800DB8751 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4CAD5FBD1CD1A1A000DB8751 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4CAD5FC01CD1A40C00DB8751 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CAD5FDD1CD1B21400DB8751 /* Foundation.framework */,
+				4CAD5FDB1CD1B20A00DB8751 /* UIKit.framework */,
+				4CAD5FD91CD1B20000DB8751 /* QuartzCore.framework */,
+				4CAD5FD11CD1B1F800DB8751 /* CoreGraphics.framework */,
+				4CAD5FD21CD1B1F800DB8751 /* CoreImage.framework */,
+				4CAD5FD31CD1B1F800DB8751 /* CoreMedia.framework */,
+				4CAD5FD41CD1B1F800DB8751 /* CoreVideo.framework */,
+				4CAD5FCF1CD1B1E200DB8751 /* AVFoundation.framework */,
+				4CAD5FCD1CD1B1D900DB8751 /* AssetsLibrary.framework */,
+				4CAD5FCB1CD1B1D000DB8751 /* Accelerate.framework */,
+				4CAD5FBE1CD1A3FB00DB8751 /* opencv2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CAD5FA01CD1A16800DB8751 /* FoosballCameraController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CAD5FB81CD1A16800DB8751 /* Build configuration list for PBXNativeTarget "FoosballCameraController" */;
+			buildPhases = (
+				4CAD5F9D1CD1A16800DB8751 /* Sources */,
+				4CAD5F9E1CD1A16800DB8751 /* Frameworks */,
+				4CAD5F9F1CD1A16800DB8751 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoosballCameraController;
+			productName = FoosballCameraController;
+			productReference = 4CAD5FA11CD1A16800DB8751 /* FoosballCameraController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CAD5F991CD1A16800DB8751 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Michael Ozeryansky";
+				TargetAttributes = {
+					4CAD5FA01CD1A16800DB8751 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 4CAD5F9C1CD1A16800DB8751 /* Build configuration list for PBXProject "FoosballCameraController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CAD5F981CD1A16800DB8751;
+			productRefGroup = 4CAD5FA21CD1A16800DB8751 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CAD5FA01CD1A16800DB8751 /* FoosballCameraController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CAD5F9F1CD1A16800DB8751 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CAD5FB41CD1A16800DB8751 /* LaunchScreen.storyboard in Resources */,
+				4CEB66851CD461BE0008282A /* pattern.png in Resources */,
+				4CAD5FB11CD1A16800DB8751 /* Assets.xcassets in Resources */,
+				4CAD5FAF1CD1A16800DB8751 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CAD5F9D1CD1A16800DB8751 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CAD5FAC1CD1A16800DB8751 /* ViewController.m in Sources */,
+				4CAD5FA91CD1A16800DB8751 /* AppDelegate.m in Sources */,
+				4CAD5FA61CD1A16800DB8751 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4CAD5FAD1CD1A16800DB8751 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CAD5FAE1CD1A16800DB8751 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4CAD5FB21CD1A16800DB8751 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CAD5FB31CD1A16800DB8751 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CAD5FB61CD1A16800DB8751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4CAD5FB71CD1A16800DB8751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CAD5FB91CD1A16800DB8751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = FoosballCameraController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ozeryansky.FoosballCameraController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4CAD5FBA1CD1A16800DB8751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = FoosballCameraController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ozeryansky.FoosballCameraController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CAD5F9C1CD1A16800DB8751 /* Build configuration list for PBXProject "FoosballCameraController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CAD5FB61CD1A16800DB8751 /* Debug */,
+				4CAD5FB71CD1A16800DB8751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CAD5FB81CD1A16800DB8751 /* Build configuration list for PBXNativeTarget "FoosballCameraController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CAD5FB91CD1A16800DB8751 /* Debug */,
+				4CAD5FBA1CD1A16800DB8751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4CAD5F991CD1A16800DB8751 /* Project object */;
+}
