@@ -1,12 +1,16 @@
 #include <SoftwareSerial.h>
 #include <AccelStepper.h>
 
-SoftwareSerial Bluetooth(10, 11);
 
-int pinStep1 = 8;
-int pinDir1 = 9;
-int pinStep2 = 5;
+int btRxPin = 10;
+int btTxPin = 11;
+
+int pinDir1 = 8;
+int pinStep1 = 9;
 int pinDir2 = 6;
+int pinStep2 = 7;
+
+SoftwareSerial Bluetooth(btRxPin, btTxPin);
 
 AccelStepper stepper1(AccelStepper::DRIVER, pinStep1, pinDir1);
 AccelStepper stepper2(AccelStepper::DRIVER, pinStep2, pinDir2);

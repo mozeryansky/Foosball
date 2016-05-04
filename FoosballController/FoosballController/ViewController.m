@@ -46,7 +46,7 @@
         [availablePorts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             ORSSerialPort *port = (ORSSerialPort *)obj;
             NSLog(@"%lu. %@\n", (unsigned long)idx, port.name);
-            if([port.name rangeOfString:@"RNBT"].location != NSNotFound){
+            if([port.name rangeOfString:@"NBT-8A41"].location != NSNotFound){
                 bluetoothPort = idx;
             }
         }];
